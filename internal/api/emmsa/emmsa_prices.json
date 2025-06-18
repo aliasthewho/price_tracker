@@ -1,0 +1,1138 @@
+[
+  {
+    "date": "2025-06-17",
+    "producto": "ACELGA",
+    "variedad": "ACELGA",
+    "precio_min": 3,
+    "precio_max": 3.5,
+    "precio_prom": 3.38
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "AJI",
+    "variedad": "AJI AMARILLO SECO",
+    "precio_min": 15,
+    "precio_max": 16,
+    "precio_prom": 15.63
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "AJI",
+    "variedad": "AJI ESCABECHE FRESCO/ZANAHOR/LISO",
+    "precio_min": 2,
+    "precio_max": 2.5,
+    "precio_prom": 2.25
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "AJI",
+    "variedad": "AJI MONTANA/CHAN(COSTA/SELVA)",
+    "precio_min": 5,
+    "precio_max": 6,
+    "precio_prom": 5.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "AJI",
+    "variedad": "AJI SECO PANCA",
+    "precio_min": 16,
+    "precio_max": 17,
+    "precio_prom": 16.75
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "AJI",
+    "variedad": "AJI ROCOTO (COSTA/SIERRA/SELVA)",
+    "precio_min": 4.44,
+    "precio_max": 5,
+    "precio_prom": 4.58
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "AJI",
+    "variedad": "AJI PAPRIKA",
+    "precio_min": 14,
+    "precio_max": 15,
+    "precio_prom": 14.63
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "AJO",
+    "variedad": "AJO PELADO",
+    "precio_min": 8.5,
+    "precio_max": 9,
+    "precio_prom": 8.63
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "AJO",
+    "variedad": "AJO CRIOLLO O NAPURI",
+    "precio_min": 8,
+    "precio_max": 9,
+    "precio_prom": 8.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "AJO",
+    "variedad": "AJO MORADO/BARRAN/LEGIT/OTROS",
+    "precio_min": 12,
+    "precio_max": 13,
+    "precio_prom": 12.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "ALBAHACA",
+    "variedad": "ALBAHACA",
+    "precio_min": 3.85,
+    "precio_max": 4.62,
+    "precio_prom": 4.24
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "ALCACHOFA",
+    "variedad": "ALCACHOFA SERRANA/VALLE/QUEBRADA/HELADA",
+    "precio_min": 5.5,
+    "precio_max": 6.5,
+    "precio_prom": 6.06
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "APIO",
+    "variedad": "APIO",
+    "precio_min": 1.33,
+    "precio_max": 2.67,
+    "precio_prom": 2
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "ARVEJA",
+    "variedad": "ARVEJA VERDE AMER/MEJ/(CRIOLLA/SERRANA)",
+    "precio_min": 6.5,
+    "precio_max": 7,
+    "precio_prom": 6.7
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "ARVEJA",
+    "variedad": "ARVEJA VERDE BLANCA SERRANA",
+    "precio_min": 5.5,
+    "precio_max": 6,
+    "precio_prom": 5.75
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "BERENJENA",
+    "variedad": "BERENJENA (CRIOLLA/SERRANA)",
+    "precio_min": 4,
+    "precio_max": 5.6,
+    "precio_prom": 4.9
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "BETARRAGA",
+    "variedad": "BETARRAGA (CRIOLLA/SERRANA)",
+    "precio_min": 2,
+    "precio_max": 2.67,
+    "precio_prom": 2.34
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "CAIGUA",
+    "variedad": "CAIGUA (SELVA)",
+    "precio_min": 2.33,
+    "precio_max": 2.67,
+    "precio_prom": 2.55
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "CALABAZA",
+    "variedad": "CALABAZA (CRIOLLA/SERRANA)",
+    "precio_min": 1.38,
+    "precio_max": 1.75,
+    "precio_prom": 1.54
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "CAMOTE",
+    "variedad": "CAMOTE AMARILLO/LEGIT/JHONATAN/2001/FUTU",
+    "precio_min": 1.1,
+    "precio_max": 1.2,
+    "precio_prom": 1.15
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "CAMOTE",
+    "variedad": "CAMOTE MORADO/LEG/MILA/MEJ/PEPIN/PARAMON",
+    "precio_min": 2.2,
+    "precio_max": 2.6,
+    "precio_prom": 2.43
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "CEBOLLA",
+    "variedad": "CEBOLLA CABEZA BLANCA NACIONAL",
+    "precio_min": 1.5,
+    "precio_max": 2,
+    "precio_prom": 1.73
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "CEBOLLA",
+    "variedad": "CEBOLLA CABEZA ROJA/MAJ/TAMB/LOC/CAM/MIL",
+    "precio_min": 0.9,
+    "precio_max": 1.2,
+    "precio_prom": 1.05
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "CEBOLLA",
+    "variedad": "CEBOLLA CHINA (CRIOLLA/SERRANA)",
+    "precio_min": 1.5,
+    "precio_max": 2.5,
+    "precio_prom": 2
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "COL",
+    "variedad": "COL CORAZON/NENE/(CRIOLLA/SERRANA)",
+    "precio_min": 0.57,
+    "precio_max": 0.71,
+    "precio_prom": 0.68
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "COLIFLOR",
+    "variedad": "COLIFLOR (CRIOLLA/SERRANA)",
+    "precio_min": 0.71,
+    "precio_max": 0.86,
+    "precio_prom": 0.81
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "CULANTRO",
+    "variedad": "CULANTRO (CRIOLLO/SERRANO)",
+    "precio_min": 2,
+    "precio_max": 2.67,
+    "precio_prom": 2.33
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "CHOCLO",
+    "variedad": "CHOCLO SERRANO TIPO CUZCO",
+    "precio_min": 2.62,
+    "precio_max": 3.57,
+    "precio_prom": 3.04
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "ESPARRAGO",
+    "variedad": "ESPARRAGO/VERDE/BLANCO",
+    "precio_min": 6,
+    "precio_max": 8,
+    "precio_prom": 7.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "ESPINACA",
+    "variedad": "ESPINACA (CRIOLLA/SERRANA)",
+    "precio_min": 2,
+    "precio_max": 3,
+    "precio_prom": 2.63
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "FREJOL",
+    "variedad": "FREJOL VERDE CANARIO",
+    "precio_min": 2.3,
+    "precio_max": 2.7,
+    "precio_prom": 2.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "HABA",
+    "variedad": "HABA VERDE SERRANA",
+    "precio_min": 1.5,
+    "precio_max": 1.7,
+    "precio_prom": 1.6
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "HIERBABUENA",
+    "variedad": "HIERBA BUENA (CRIOLLA/SERRANA)",
+    "precio_min": 1.18,
+    "precio_max": 1.76,
+    "precio_prom": 1.47
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "HORTALIZAS CHINAS",
+    "variedad": "JOLANTAU/ORGANICA",
+    "precio_min": 6,
+    "precio_max": 7,
+    "precio_prom": 6.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "HORTALIZAS CHINAS",
+    "variedad": "COL CHINA/LONGAPA",
+    "precio_min": 3.33,
+    "precio_max": 4.17,
+    "precio_prom": 3.75
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "HORTALIZAS CHINAS",
+    "variedad": "PACCHOY",
+    "precio_min": 5,
+    "precio_max": 6.67,
+    "precio_prom": 5.63
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "HORTALIZAS CHINAS",
+    "variedad": "KION (COSTA/SELVA)",
+    "precio_min": 4,
+    "precio_max": 5,
+    "precio_prom": 4.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "HORTALIZAS CHINAS",
+    "variedad": "FREJOLITO CHINO",
+    "precio_min": 2.5,
+    "precio_max": 2.5,
+    "precio_prom": 2.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "HORTALIZAS CHINAS",
+    "variedad": "BROCOLI",
+    "precio_min": 3,
+    "precio_max": 4,
+    "precio_prom": 3.63
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "HUACATAY",
+    "variedad": "HUACATAY (CRIOLLO/SERRANO)",
+    "precio_min": 2.17,
+    "precio_max": 3.04,
+    "precio_prom": 2.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "LECHUGA",
+    "variedad": "LECHUGA AMERICANA (CRIOLLA/SERRANA)",
+    "precio_min": 1.17,
+    "precio_max": 1.33,
+    "precio_prom": 1.25
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "LECHUGA",
+    "variedad": "LECHUGA CRIOLLA SEDA",
+    "precio_min": 2.67,
+    "precio_max": 3,
+    "precio_prom": 2.84
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "LECHUGA",
+    "variedad": "LECHUGA SERRANA SEDA",
+    "precio_min": 2.33,
+    "precio_max": 2.67,
+    "precio_prom": 2.42
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "LECHUGA",
+    "variedad": "LECHUGA ROMANA/HIDROF./BLANCA/ROJA/ORG",
+    "precio_min": 1,
+    "precio_max": 1.33,
+    "precio_prom": 1.21
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "LENTEJA",
+    "variedad": "LENTEJA-VERDE/CORRIENTE",
+    "precio_min": 2.5,
+    "precio_max": 3,
+    "precio_prom": 2.83
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "LENTEJA",
+    "variedad": "LENTEJA-VERDE BOCONA/SARANDAJA",
+    "precio_min": 3,
+    "precio_max": 3,
+    "precio_prom": 3
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "LIMON",
+    "variedad": "LIMON CITRICO CAJON",
+    "precio_min": 1.57,
+    "precio_max": 1.74,
+    "precio_prom": 1.62
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "LIMON",
+    "variedad": "LIMON CITRICO BOLSA",
+    "precio_min": 1.42,
+    "precio_max": 2.67,
+    "precio_prom": 2.3
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "MAIZ",
+    "variedad": "MAIZ MORADO FRESC/MOJAD/SARASO/SECO",
+    "precio_min": 3.5,
+    "precio_max": 3.8,
+    "precio_prom": 3.6
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "MAIZ",
+    "variedad": "MARLO/CORONTA DE MAIZ MORADO",
+    "precio_min": 10,
+    "precio_max": 12,
+    "precio_prom": 10.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "NABO",
+    "variedad": "NABO (CRIOLLO/SERRANO)",
+    "precio_min": 2.5,
+    "precio_max": 3.5,
+    "precio_prom": 3
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OREGANO",
+    "variedad": "OREGANO (CRIOLLO/SERRANO)",
+    "precio_min": 10,
+    "precio_max": 10,
+    "precio_prom": 10
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OREGANO",
+    "variedad": "OREGANO SECO",
+    "precio_min": 11,
+    "precio_max": 14,
+    "precio_prom": 12.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OLLUCO",
+    "variedad": "OLLUCO LARGO (SIN LAVAR/LAVADO)",
+    "precio_min": 1.1,
+    "precio_max": 1.3,
+    "precio_prom": 1.23
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OLLUCO",
+    "variedad": "OLLUCO REDONDO (SIN LAVAR/LAVADO)",
+    "precio_min": 1.2,
+    "precio_max": 1.5,
+    "precio_prom": 1.35
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PALLAR",
+    "variedad": "PALLAR VERDE SERRUCHO/CACHITO",
+    "precio_min": 3.3,
+    "precio_max": 3.5,
+    "precio_prom": 3.43
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PAPA",
+    "variedad": "PAPA AMARILLA",
+    "precio_min": 2.5,
+    "precio_max": 2.7,
+    "precio_prom": 2.6
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PAPA",
+    "variedad": "PAPA BLANCA/VALLE/OTROS",
+    "precio_min": 1.1,
+    "precio_max": 1.3,
+    "precio_prom": 1.2
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PAPA",
+    "variedad": "PAPA COLOR/VALLE/OTROS",
+    "precio_min": 1.4,
+    "precio_max": 1.5,
+    "precio_prom": 1.46
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PAPA",
+    "variedad": "PAPA HUAYRO (ROJO-MORO-NEGRO)RUNT/MARH/U",
+    "precio_min": 1.6,
+    "precio_max": 1.8,
+    "precio_prom": 1.66
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PAPA",
+    "variedad": "PAPA HUAMANTANGA",
+    "precio_min": 1.6,
+    "precio_max": 1.8,
+    "precio_prom": 1.69
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PAPA",
+    "variedad": "PAPA NEGRA ANDINA",
+    "precio_min": 1,
+    "precio_max": 1.1,
+    "precio_prom": 1.05
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PAPA",
+    "variedad": "PAPA PERUANITA (INJERTO)",
+    "precio_min": 1.8,
+    "precio_max": 2,
+    "precio_prom": 1.9
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PAPA",
+    "variedad": "PAPA YUNGAY",
+    "precio_min": 1.1,
+    "precio_max": 1.3,
+    "precio_prom": 1.2
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PAPA",
+    "variedad": "PAPA UNICA",
+    "precio_min": 1.5,
+    "precio_max": 1.7,
+    "precio_prom": 1.61
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PAPA",
+    "variedad": "PAPA CANCHAN",
+    "precio_min": 1.2,
+    "precio_max": 1.4,
+    "precio_prom": 1.33
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PEPINILLO",
+    "variedad": "PEPINILLO",
+    "precio_min": 0.83,
+    "precio_max": 1.33,
+    "precio_prom": 1.12
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PEREJIL",
+    "variedad": "PEREJIL NACIONAL(CRIOLLO/SERRANO)",
+    "precio_min": 3.5,
+    "precio_max": 4,
+    "precio_prom": 3.88
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PIMIENTO",
+    "variedad": "PIMIENTO MORRON/INJERTO/RANGER",
+    "precio_min": 2.22,
+    "precio_max": 2.78,
+    "precio_prom": 2.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PORO",
+    "variedad": "PORO (CRIOLLO/SERRANO)",
+    "precio_min": 1.54,
+    "precio_max": 1.92,
+    "precio_prom": 1.78
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "RABANITO",
+    "variedad": "RABANITO (CRIOLLO/SERRANO)",
+    "precio_min": 4,
+    "precio_max": 5.33,
+    "precio_prom": 4.67
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "TOMATE",
+    "variedad": "TOMATE CHERRY",
+    "precio_min": 5,
+    "precio_max": 5.5,
+    "precio_prom": 5.17
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "TOMATE",
+    "variedad": "TOMATE ORGANICO",
+    "precio_min": 4,
+    "precio_max": 4.5,
+    "precio_prom": 4.33
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "TOMATE",
+    "variedad": "TOMATE KATIA",
+    "precio_min": 1.59,
+    "precio_max": 2.05,
+    "precio_prom": 1.82
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "VAINITA",
+    "variedad": "VAINITA AMERICANA/SEDA/PITO/CORRIENT/MAD",
+    "precio_min": 3,
+    "precio_max": 3.3,
+    "precio_prom": 3.13
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "YUCA",
+    "variedad": "YUCA AMARILLA/LEGITIMO (COSTA/SELVA)",
+    "precio_min": 2,
+    "precio_max": 2.3,
+    "precio_prom": 2.13
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "ZANAHORIA",
+    "variedad": "ZANAHORIA (CRIOLLA/SERRANA)",
+    "precio_min": 1.64,
+    "precio_max": 1.82,
+    "precio_prom": 1.71
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "ZAPALLO",
+    "variedad": "ZAPALLO ITALIANO",
+    "precio_min": 1,
+    "precio_max": 1.5,
+    "precio_prom": 1.29
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "ZAPALLO",
+    "variedad": "ZAPALLO LOCHE",
+    "precio_min": 6.67,
+    "precio_max": 10,
+    "precio_prom": 8.17
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "ZAPALLO",
+    "variedad": "ZAPALLO MACRE(COSTA/SIERRA/SELVA)",
+    "precio_min": 1,
+    "precio_max": 1.3,
+    "precio_prom": 1.15
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTROS  PROD.AGRIC.",
+    "variedad": "AJONJOLI",
+    "precio_min": 10,
+    "precio_max": 12,
+    "precio_prom": 11
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTROS  PROD.AGRIC.",
+    "variedad": "ACHIOTE",
+    "precio_min": 10,
+    "precio_max": 12,
+    "precio_prom": 11.33
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTROS  PROD.AGRIC.",
+    "variedad": "HIERBA LUISA",
+    "precio_min": 1.25,
+    "precio_max": 1.5,
+    "precio_prom": 1.42
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTROS  PROD.AGRIC.",
+    "variedad": "MANZANILLA",
+    "precio_min": 4,
+    "precio_max": 6,
+    "precio_prom": 4.93
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTROS  PROD.AGRIC.",
+    "variedad": "ANIS FRESCO/VERDE (CRIOLLA/SERRANA)",
+    "precio_min": 7.5,
+    "precio_max": 7.5,
+    "precio_prom": 7.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTROS  PROD.AGRIC.",
+    "variedad": "ROMERO",
+    "precio_min": 9,
+    "precio_max": 10,
+    "precio_prom": 9.67
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTROS  PROD.AGRIC.",
+    "variedad": "TORONJIL",
+    "precio_min": 5,
+    "precio_max": 6,
+    "precio_prom": 5.33
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTROS  PROD.AGRIC.",
+    "variedad": "MENTA",
+    "precio_min": 7.5,
+    "precio_max": 7.5,
+    "precio_prom": 7.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTROS  PROD.AGRIC.",
+    "variedad": "HINOJO SIN FRUTO",
+    "precio_min": 2.86,
+    "precio_max": 2.86,
+    "precio_prom": 2.86
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTROS  PROD.AGRIC.",
+    "variedad": "CEDRON",
+    "precio_min": 7,
+    "precio_max": 7.5,
+    "precio_prom": 7.33
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTROS  PROD.AGRIC.",
+    "variedad": "ALFALFA",
+    "precio_min": 1.12,
+    "precio_max": 1.32,
+    "precio_prom": 1.21
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTROS  PROD.AGRIC.",
+    "variedad": "YACON",
+    "precio_min": 3,
+    "precio_max": 4,
+    "precio_prom": 3.38
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTROS  PROD.AGRIC.",
+    "variedad": "AGUAYMANTO",
+    "precio_min": 4.5,
+    "precio_max": 5,
+    "precio_prom": 4.75
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTROS  PROD.AGRIC.",
+    "variedad": "CHAMPI?ONES",
+    "precio_min": 5,
+    "precio_max": 6,
+    "precio_prom": 5.38
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTROS  PROD.AGRIC.",
+    "variedad": "ACEITUNA",
+    "precio_min": 20,
+    "precio_max": 26,
+    "precio_prom": 23
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "CARAMBOLA",
+    "variedad": "CARAMBOLA",
+    "precio_min": 1.42,
+    "precio_max": 1.5,
+    "precio_prom": 1.46
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "DURAZNO",
+    "variedad": "DURAZNO",
+    "precio_min": 4,
+    "precio_max": 6,
+    "precio_prom": 5.13
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "FRESA",
+    "variedad": "FRESA ROJA",
+    "precio_min": 4.5,
+    "precio_max": 6.5,
+    "precio_prom": 5.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "GRANADILLA",
+    "variedad": "GRANADILLA (SELVA)",
+    "precio_min": 5,
+    "precio_max": 5.5,
+    "precio_prom": 5.13
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PEPINO",
+    "variedad": "PEPINO RAYADO O MELON",
+    "precio_min": 4.5,
+    "precio_max": 6,
+    "precio_prom": 5.13
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PERA",
+    "variedad": "PERA DE AGUA",
+    "precio_min": 5,
+    "precio_max": 6,
+    "precio_prom": 5.63
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PLATANOS",
+    "variedad": "PLATANOS SEDA",
+    "precio_min": 2.43,
+    "precio_max": 2.79,
+    "precio_prom": 2.64
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PLATANOS",
+    "variedad": "PLATANOS ISLA",
+    "precio_min": 2.8,
+    "precio_max": 3.5,
+    "precio_prom": 3.15
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PLATANOS",
+    "variedad": "PLATANOS BISCOCHITO",
+    "precio_min": 3,
+    "precio_max": 3.5,
+    "precio_prom": 3.19
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PLATANOS",
+    "variedad": "PLATANOS BELLACO",
+    "precio_min": 3,
+    "precio_max": 4,
+    "precio_prom": 3.38
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PLATANOS",
+    "variedad": "PLATANOS PALILLO",
+    "precio_min": 3.5,
+    "precio_max": 5,
+    "precio_prom": 4.13
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "MANGO",
+    "variedad": "MANGO CRIOLLO PLANTA(COSTA)",
+    "precio_min": 3,
+    "precio_max": 4,
+    "precio_prom": 3.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "MANGO",
+    "variedad": "MANGO HADEN/HAYDE",
+    "precio_min": 2.5,
+    "precio_max": 3,
+    "precio_prom": 2.67
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "MANGO",
+    "variedad": "MANGO KENT(COSTA)",
+    "precio_min": 3,
+    "precio_max": 4,
+    "precio_prom": 3.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "MANGO",
+    "variedad": "MANGO EDWARD PLANTA",
+    "precio_min": 9,
+    "precio_max": 10,
+    "precio_prom": 9.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "MANZANA",
+    "variedad": "MANZANA DELICIA(COSTA/SIERRA)",
+    "precio_min": 3,
+    "precio_max": 3.5,
+    "precio_prom": 3.25
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "MANZANA",
+    "variedad": "MANZANA CORRIENTE PARA AGUA",
+    "precio_min": 3,
+    "precio_max": 4,
+    "precio_prom": 3.58
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "MANZANA",
+    "variedad": "MANZANA ISRAEL",
+    "precio_min": 3.5,
+    "precio_max": 5,
+    "precio_prom": 4.13
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "MANZANA",
+    "variedad": "MANZANA CHILENA ROJA",
+    "precio_min": 8,
+    "precio_max": 9,
+    "precio_prom": 8.63
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "MANZANA",
+    "variedad": "MANZANA CHILENA VERDE",
+    "precio_min": 9.8,
+    "precio_max": 10,
+    "precio_prom": 9.95
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "MANZANA",
+    "variedad": "MANZANA CHILENA FUJI",
+    "precio_min": 9,
+    "precio_max": 10,
+    "precio_prom": 9.67
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "MANZANA",
+    "variedad": "MANZANA CHILENA ROYAL",
+    "precio_min": 8,
+    "precio_max": 9,
+    "precio_prom": 8.63
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "MANZANA",
+    "variedad": "MANZANA GOLDEN",
+    "precio_min": 4,
+    "precio_max": 5,
+    "precio_prom": 4.38
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "MARACUYA",
+    "variedad": "MARACUYA (COSTA)",
+    "precio_min": 2.3,
+    "precio_max": 2.5,
+    "precio_prom": 2.38
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "TUNA",
+    "variedad": "TUNA HUAROCHIRI",
+    "precio_min": 3.5,
+    "precio_max": 4,
+    "precio_prom": 3.75
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "SANDIA",
+    "variedad": "SANDIA",
+    "precio_min": 1.5,
+    "precio_max": 2,
+    "precio_prom": 1.78
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "COCONA",
+    "variedad": "COCONA SELVA",
+    "precio_min": 4,
+    "precio_max": 6,
+    "precio_prom": 4.88
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "NARANJA",
+    "variedad": "NARANJA VALENCIA (SELVA)",
+    "precio_min": 1.05,
+    "precio_max": 1.27,
+    "precio_prom": 1.18
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "NARANJA",
+    "variedad": "NARANJA HUANDO",
+    "precio_min": 4.5,
+    "precio_max": 6,
+    "precio_prom": 5.13
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PI?A",
+    "variedad": "PI?A HAWAYANA",
+    "precio_min": 2,
+    "precio_max": 2.2,
+    "precio_prom": 2.1
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PI?A",
+    "variedad": "PI?A GOLDEN",
+    "precio_min": 1.67,
+    "precio_max": 2.11,
+    "precio_prom": 1.92
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PALTA",
+    "variedad": "PALTA HALL (COSTA)",
+    "precio_min": 3.5,
+    "precio_max": 4,
+    "precio_prom": 3.83
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PALTA",
+    "variedad": "PALTA FUERTE (COSTA)",
+    "precio_min": 4,
+    "precio_max": 5.5,
+    "precio_prom": 4.75
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "PAPAYA",
+    "variedad": "PAPAYA SELVA",
+    "precio_min": 2.25,
+    "precio_max": 3,
+    "precio_prom": 2.49
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "MEMBRILLO",
+    "variedad": "MEMBRILLO",
+    "precio_min": 3,
+    "precio_max": 4.5,
+    "precio_prom": 4
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTRAS  FRUTAS",
+    "variedad": "TAMARINDO(CON CASCARA)COSTA",
+    "precio_min": 6,
+    "precio_max": 8,
+    "precio_prom": 6.75
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTRAS  FRUTAS",
+    "variedad": "GRANADA (COSTA)",
+    "precio_min": 5,
+    "precio_max": 9,
+    "precio_prom": 7.38
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTRAS  FRUTAS",
+    "variedad": "LIMA DULCE (COSTA)",
+    "precio_min": 2,
+    "precio_max": 3,
+    "precio_prom": 2.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTRAS  FRUTAS",
+    "variedad": "LUCUMA",
+    "precio_min": 8,
+    "precio_max": 9,
+    "precio_prom": 8.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTRAS  FRUTAS",
+    "variedad": "PITAHAYA",
+    "precio_min": 14,
+    "precio_max": 14,
+    "precio_prom": 14
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTRAS  FRUTAS",
+    "variedad": "PACAY",
+    "precio_min": 6,
+    "precio_max": 7,
+    "precio_prom": 6.5
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "OTRAS  FRUTAS",
+    "variedad": "ARANDANOS",
+    "precio_min": 24,
+    "precio_max": 28,
+    "precio_prom": 26.75
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "COCO",
+    "variedad": "COCO(COSTA/SELVA)",
+    "precio_min": 1.67,
+    "precio_max": 2.33,
+    "precio_prom": 1.92
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "CHIRIMOYA",
+    "variedad": "CHIRIMOYA CUMBE",
+    "precio_min": 5,
+    "precio_max": 6,
+    "precio_prom": 5.63
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "MANDARINA",
+    "variedad": "MANDARINA",
+    "precio_min": 2.3,
+    "precio_max": 3.5,
+    "precio_prom": 2.68
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "MELON",
+    "variedad": "MELON",
+    "precio_min": 2.5,
+    "precio_max": 2.8,
+    "precio_prom": 2.65
+  },
+  {
+    "date": "2025-06-17",
+    "producto": "GUANABANA",
+    "variedad": "GUANABANA",
+    "precio_min": 4,
+    "precio_max": 6,
+    "precio_prom": 5
+  }
+]

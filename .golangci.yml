@@ -1,32 +1,23 @@
 # .golangci.yml - Configuration for golangci-lint
 # For more options see: https://golangci-lint.run/configuration/
 
-# Run configuration
+# Set Go version explicitly
 run:
-  # Skip directories
+  go: '1.22'
+  build-tags:
+    - integration
   issues-exclude-dirs:
     - "vendor"
     - "internal/mock"
     - "api"
-  # Enable modules
   modules-download-mode: readonly
-  # Set timeout
   timeout: 5m
-  # Enable all available analyzers
-  build-tags:
-    - integration
-  # Enable all available linters
   issues-exit-code: 1
-  # Enable auto-fix for supported linters
   fix: true
-  # Output format
   output-formats:
-    - colored-line-numbers
+    - colored-line-number
 
-# Linters configuration
 linters:
-  # Enable specific linters
-  enable-all: false
   enable:
     - bodyclose
     - errcheck
@@ -39,15 +30,50 @@ linters:
     - ineffassign
     - misspell
     - prealloc
+    - staticcheck
     - unconvert
+    - unused
     - whitespace
-  # Disable specific linters
   disable-all: false
-  disable:
-    - deadcode
-    - structcheck
-    - varcheck
-    - wsl  # Disable whitespace linter as it can be too opinionated
+  fast: false
+  presets:
+    - bugs
+    - unused
+
+linters-settings:
+  gocritic:
+    # Enable all checks that are tagged with 'performance' and 'style' and don't produce warnings
+    enabled-tags:
+      - performance
+      - style
+    disabled-checks:
+      - hugeParam  # This check is too opinionated
+  govet:
+    enable-all: true
+    disable:
+      - composites # Conflicts with staticcheck
+  staticcheck:
+    go: '1.22'
+    checks: ["all"]
+
+issues:
+  exclude-rules:
+    # Don't require comments for test helpers
+    - path: _test\.go$
+      linters:
+        - gomnd
+        - lll
+        - funlen
+        - gocritic
+
+  # Maximum issues count per linter. Set to 0 to disable. Default is 50.
+  max-issues-per-linter: 0
+  # Maximum count of issues with the same text. Set to 0 to disable. Default is 3.
+  max-same-issues: 0
+
+severity:
+  # Default severity for issues. It can be a string: error, warning, info
+  default-severity: error
 
 # Linter-specific configuration
 linters-settings:

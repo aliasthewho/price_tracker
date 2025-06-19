@@ -16,7 +16,8 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: '1.21'
+          # Match your local Go version (run 'go version' locally to check)
+          go-version: '1.22.x'  # Using .x to get the latest patch version
           check-latest: true
           cache: true
           cache-dependency-path: go.sum

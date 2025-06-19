@@ -3,7 +3,7 @@
 
 # Set Go version explicitly
 run:
-  go: '1.22'
+  go: '1.23.5'
   build-tags:
     - integration
   issues-exclude-dirs:

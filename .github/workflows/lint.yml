@@ -2,7 +2,7 @@ name: Lint
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, chore/setup-golangci-lint ]
   pull_request:
     branches: [ main ]
 

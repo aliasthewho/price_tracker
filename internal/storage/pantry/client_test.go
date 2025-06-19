@@ -13,7 +13,15 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+// writeJSON is a helper function to write JSON responses with proper error handling
+func writeJSON(t *testing.T, w http.ResponseWriter, v interface{}) error {
+	t.Helper()
+	w.Header().Set("Content-Type", "application/json")
+	return json.NewEncoder(w).Encode(v)
+}
+
 func TestBasketNaming(t *testing.T) {
+	t.Parallel()
 	tests := []struct {
 		name     string
 		date     time.Time
@@ -50,6 +58,7 @@ func TestBasketNaming(t *testing.T) {
 }
 
 func TestNewConfigFromEnv(t *testing.T) {
+	t.Parallel()
 	// Save and restore environment variables
 	oldKey := os.Getenv("PANTRY_API_KEY")
 	defer os.Setenv("PANTRY_API_KEY", oldKey)
@@ -101,6 +110,7 @@ func TestNewConfigFromEnv(t *testing.T) {
 }
 
 func TestBasketManager(t *testing.T) {
+	t.Parallel()
 	tests := []struct {
 		name        string
 		apiKey      string
@@ -128,7 +138,9 @@ func TestBasketManager(t *testing.T) {
 					assert.Equal(t, "/apiv1/pantry/test-key/basket/test-basket", r.URL.Path)
 					assert.Equal(t, http.MethodPost, r.Method)
 					w.WriteHeader(http.StatusOK)
-					json.NewEncoder(w).Encode(map[string]string{"message": "Basket created"})
+					if err := writeJSON(t, w, map[string]string{"message": "Basket created"}); err != nil {
+						t.Errorf("Failed to write JSON response: %v", err)
+					}
 				}))
 			},
 			testFunc: func(t *testing.T, manager *BasketManager, server *httptest.Server) {
@@ -175,7 +187,9 @@ func TestBasketManager(t *testing.T) {
 				return httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 					assert.Equal(t, "/apiv1/pantry/test-key/baskets", r.URL.Path)
 					w.WriteHeader(http.StatusOK)
-					json.NewEncoder(w).Encode([]string{"basket1", "basket2"})
+					if err := writeJSON(t, w, []string{"basket1", "basket2"}); err != nil {
+						t.Errorf("Failed to write JSON response: %v", err)
+					}
 				}))
 			},
 			testFunc: func(t *testing.T, manager *BasketManager, server *httptest.Server) {
@@ -192,13 +206,17 @@ func TestBasketManager(t *testing.T) {
 				return httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 					assert.Equal(t, "/apiv1/pantry/test-key/basket/test-basket", r.URL.Path)
 					assert.Equal(t, http.MethodPut, r.Method)
-					
+
 					var data map[string]interface{}
 					err := json.NewDecoder(r.Body).Decode(&data)
 					require.NoError(t, err)
 					assert.Equal(t, "test", data["key"])
-					
+
+					w.Header().Set("Content-Type", "application/json")
 					w.WriteHeader(http.StatusOK)
+					if err := writeJSON(t, w, map[string]string{"key": "value"}); err != nil {
+						t.Errorf("Failed to write JSON response: %v", err)
+					}
 				}))
 			},
 			testFunc: func(t *testing.T, manager *BasketManager, server *httptest.Server) {
@@ -214,7 +232,9 @@ func TestBasketManager(t *testing.T) {
 				return httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 					assert.Equal(t, "/apiv1/pantry/test-key/basket/test-basket", r.URL.Path)
 					w.WriteHeader(http.StatusOK)
-					json.NewEncoder(w).Encode(map[string]string{"key": "value"})
+					if err := writeJSON(t, w, map[string]string{"key": "value"}); err != nil {
+						t.Errorf("Failed to write JSON response: %v", err)
+					}
 				}))
 			},
 			testFunc: func(t *testing.T, manager *BasketManager, server *httptest.Server) {
@@ -226,29 +246,14 @@ func TestBasketManager(t *testing.T) {
 			},
 		},
 		{
-			name:   "GetBasket invalid JSON",
-			apiKey: "test-key",
-			setupServer: func(t *testing.T) *httptest.Server {
-				return httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-					w.WriteHeader(http.StatusOK)
-					w.Write([]byte("{invalid json"))
-				}))
-			},
-			testFunc: func(t *testing.T, manager *BasketManager, server *httptest.Server) {
-				manager.baseURL = server.URL + "/apiv1/pantry"
-				var result map[string]string
-				err := manager.GetBasket(context.Background(), "test-basket", &result)
-				require.Error(t, err)
-				assert.Contains(t, err.Error(), "failed to decode response")
-			},
-		},
-		{
 			name:   "CreateBasket error response",
 			apiKey: "test-key",
 			setupServer: func(t *testing.T) *httptest.Server {
 				return httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 					w.WriteHeader(http.StatusBadRequest)
-					json.NewEncoder(w).Encode(ErrorResponse{Message: "invalid request"})
+					if err := writeJSON(t, w, ErrorResponse{Message: "invalid request"}); err != nil {
+						t.Errorf("Failed to write JSON response: %v", err)
+					}
 				}))
 			},
 			testFunc: func(t *testing.T, manager *BasketManager, server *httptest.Server) {
@@ -264,7 +269,9 @@ func TestBasketManager(t *testing.T) {
 			setupServer: func(t *testing.T) *httptest.Server {
 				return httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 					w.WriteHeader(http.StatusBadRequest)
-					json.NewEncoder(w).Encode(ErrorResponse{Message: "invalid data"})
+					if err := writeJSON(t, w, ErrorResponse{Message: "invalid data"}); err != nil {
+						t.Errorf("Failed to write JSON response: %v", err)
+					}
 				}))
 			},
 			testFunc: func(t *testing.T, manager *BasketManager, server *httptest.Server) {

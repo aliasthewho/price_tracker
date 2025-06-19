@@ -45,13 +45,15 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to create scraper: %v", err)
 	}
-	defer s.Close()
 
 	// Scrape prices
 	prices, err := s.ScrapePrices(targetDate)
 	if err != nil {
+		s.Close()
 		log.Fatalf("Failed to fetch prices: %v", err)
 	}
+	// Don't use defer with Fatalf as it won't run deferred functions
+	s.Close()
 
 	// Prepare data for storage
 	data := map[string]interface{}{
@@ -65,8 +67,8 @@ func main() {
 		saveToPantry(targetDate, data)
 	}
 
-	// Convert to JSON
-	jsonData, err := json.MarshalIndent(prices, "", "  ")
+	// Marshal prices to JSON
+	jsonData, err := json.MarshalIndent(data, "", "  ")
 	if err != nil {
 		log.Fatalf("Failed to marshal prices to JSON: %v", err)
 	}
@@ -74,11 +76,11 @@ func main() {
 	// Output results
 	if *outputFile != "" {
 		// Write to file
-		err = os.WriteFile(*outputFile, jsonData, 0644)
+		err = os.WriteFile(*outputFile, jsonData, 0o600) // Use 0o600 for octal literal
 		if err != nil {
 			log.Fatalf("Failed to write to file: %v", err)
 		}
-		fmt.Printf("Successfully saved prices to %s\n", *outputFile)
+		log.Printf("Prices written to %s", *outputFile)
 	} else {
 		// Print to stdout
 		fmt.Println(string(jsonData))

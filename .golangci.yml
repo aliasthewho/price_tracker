@@ -1,0 +1,104 @@
+# .golangci.yml - Configuration for golangci-lint
+# For more options see: https://golangci-lint.run/configuration/
+
+# Run configuration
+run:
+  # Skip directories
+  issues-exclude-dirs:
+    - "vendor"
+    - "internal/mock"
+    - "api"
+  # Enable modules
+  modules-download-mode: readonly
+  # Set timeout
+  timeout: 5m
+  # Enable all available analyzers
+  build-tags:
+    - integration
+  # Enable all available linters
+  issues-exit-code: 1
+  # Enable auto-fix for supported linters
+  fix: true
+  # Output format
+  output-formats:
+    - colored-line-numbers
+
+# Linters configuration
+linters:
+  # Enable specific linters
+  enable-all: false
+  enable:
+    - bodyclose
+    - errcheck
+    - gocritic
+    - gofmt
+    - goimports
+    - gosec
+    - gosimple
+    - govet
+    - ineffassign
+    - misspell
+    - prealloc
+    - unconvert
+    - whitespace
+  # Disable specific linters
+  disable-all: false
+  disable:
+    - deadcode
+    - structcheck
+    - varcheck
+    - wsl  # Disable whitespace linter as it can be too opinionated
+
+# Linter-specific configuration
+linters-settings:
+  # Configuration for gocritic
+  gocritic:
+    enabled-tags:
+      - performance
+      - style
+      - experimental
+    disabled-checks:
+      - hugeParam  # Disable as it's often not practical
+  
+  # Configuration for gofmt
+  gofmt:
+    simplify: true
+  
+  # Configuration for goimports
+  goimports:
+    local-prefixes: github.com/aliasthewho/price-tracker
+  
+  # Configuration for gosec
+  gosec:
+    excludes:
+      - G101  # Potential hardcoded credentials (we'll handle secrets properly)
+      - G107  # Potential HTTP request with variable (we validate URLs)
+
+# Issues configuration
+issues:
+  # Exclude issues reported by linters
+  exclude-rules:
+    # Exclude some linters from running on tests
+    - path: _test\.go
+      linters:
+        - gosec
+        - gocritic
+    
+    # Exclude common false positives
+    - linters:
+        - gosec
+      text: "G404: "
+    
+    # Exclude variable names that are too short
+    - linters:
+        - gocritic
+      text: "variable name .+ is too short"
+
+# Output configuration
+output:
+  # Format of output: "line-number", "json", "colored-line-number", "tab", "checkstyle", "code-climate", "junit-xml", "github-actions"
+  format: colored-line-number
+  # Print issues count by linter, can be 'always', 'never', 'error' (default 'always')
+  print-issued-lines: true
+  # Print linter name in the end of issue text (default true)
+  print-linter-name: true

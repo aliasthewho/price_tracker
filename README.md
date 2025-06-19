@@ -171,17 +171,101 @@ go build -o price-tracker ./cmd/price-tracker
 go build -o pantry-cli ./cmd/pantry-cli
 ```
 
+## 🧪 Testing & Code Quality
+
+### Running Tests
+
+Run the test suite:
+
+```bash
+go test -v ./...
+```
+
+### Linting
+
+This project uses `golangci-lint` for code quality checks. The linter configuration is in `.golangci.yml`.
+
+#### Running Linters Locally
+
+1. Install `golangci-lint` (if not already installed):
+   ```bash
+   # Using Homebrew (macOS/Linux)
+   brew install golangci-lint
+   
+   # Or using go install
+   go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+   ```
+
+2. Run the linter:
+   ```bash
+   # Run all linters
+   make lint
+   
+   # Or run directly
+   golangci-lint run
+   ```
+
+#### GitHub Integration
+
+Linting is automatically performed on every push and pull request via GitHub Actions. The workflow file is located at `.github/workflows/lint.yml`.
+
+A status badge is available to show the current linting status:
+
+```markdown
+[![Lint Status](https://github.com/your-username/price-tracker/actions/workflows/lint.yml/badge.svg)](https://github.com/your-username/price-tracker/actions/workflows/lint.yml)
+```
+
+#### Common Linting Issues
+
+- Formatting: Run `gofmt -w .` to automatically format your code
+- Imports: Run `goimports -w .` to organize imports
+- To see all issues: `golangci-lint run -v`
+- To fix auto-fixable issues: `golangci-lint run --fix`
+
+## 🛠️ Development
+
+### Code Quality
+
+This project uses [golangci-lint](https://golangci-lint.run/) for code quality checks. To get started:
+
+```bash
+# Install golangci-lint (requires Go 1.16+)
+curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.59.0
+
+# Run linters
+golangci-lint run
+
+# Or use the Makefile
+make lint
+```
+
 ### Testing
 
 ```bash
 # Run all tests
-go test -v -cover ./...
+make test
 
-# Run tests for a specific package
-go test -v -cover ./internal/storage/pantry/...
+# Run tests with race detector
+make test-race
 
 # Generate coverage report
-go test -coverprofile=coverage.out ./... && go tool cover -html=coverage.out
+make cover
+
+# Run tests for a specific package
+go test -v -cover ./internal/storage/pantry/
+```
+
+### Common Tasks
+
+```bash
+# Build the application
+make build
+
+# Clean build artifacts
+make clean
+
+# Install development tools
+make tools
 ```
 
 ### Code Structure
@@ -201,6 +285,8 @@ go test -coverprofile=coverage.out ./... && go tool cover -html=coverage.out
 - The test suite includes unit tests and integration tests
 - Mock servers are used for testing external API calls
 - Current test coverage: 71%+
+- Run `make cover` to generate a coverage report
+- Run `make lint` to check code quality
 
 ## 🚨 Troubleshooting
 

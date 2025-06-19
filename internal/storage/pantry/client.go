@@ -28,11 +28,11 @@ type (
 // The zero value is not usable, use NewBasketManager instead.
 type BasketManager struct {
 	// baseURL is the base URL of the Pantry API
-	baseURL    string       // Base URL of the Pantry API
+	baseURL string
 	// apiKey is the API key for authentication
-	apiKey     string       // API key for authentication
+	apiKey string
 	// httpClient is the HTTP client for making requests
-	httpClient *http.Client // HTTP client for making requests
+	httpClient *http.Client
 }
 
 // Config holds the configuration required to initialize a Pantry client.
@@ -47,10 +47,11 @@ type Config struct {
 // Returns an error if the environment variable is not set or is empty.
 //
 // Example:
-//  	cfg, err := NewConfigFromEnv()
-//  	if err != nil {
-//  		log.Fatal(err)
-//  	}
+//
+//	cfg, err := NewConfigFromEnv()
+//	if err != nil {
+//	    log.Fatal(err)
+//	}
 func NewConfigFromEnv() (Config, error) {
 	apiKey := os.Getenv("PANTRY_API_KEY")
 	if apiKey == "" {
@@ -65,8 +66,9 @@ func NewConfigFromEnv() (Config, error) {
 // The default HTTP client has a 10-second timeout.
 //
 // Example:
-//  	cfg := Config{APIKey: "your-api-key"}
-//  	manager := NewBasketManager(cfg)
+//
+//	cfg := Config{APIKey: "your-api-key"}
+//	manager := NewBasketManager(cfg)
 func NewBasketManager(cfg Config) *BasketManager {
 	return &BasketManager{
 		baseURL:    "https://getpantry.cloud/apiv1/pantry",
@@ -79,8 +81,9 @@ func NewBasketManager(cfg Config) *BasketManager {
 // The format is "prices_YYYY_MM_DD".
 //
 // Example:
-//  	name := BasketName(time.Date(2023, 6, 18, 0, 0, 0, 0, time.UTC))
-//  	// name is "prices_2023_06_18"
+//
+//	name := BasketName(time.Date(2023, 6, 18, 0, 0, 0, 0, time.UTC))
+//	// name is "prices_2023_06_18"
 func BasketName(date time.Time) string {
 	return fmt.Sprintf("prices_%s", date.Format("2006_01_02"))
 }
@@ -91,26 +94,27 @@ func BasketName(date time.Time) string {
 // already exists, this function will return an error.
 //
 // Example:
-//  	err := manager.CreateBasket(ctx, "my-basket")
-//  	if err != nil {
-//  		return fmt.Errorf("failed to create basket: %w", err)
-//  	}
+//
+//	err := manager.CreateBasket(ctx, "my-basket")
+//	if err != nil {
+//	    return fmt.Errorf("failed to create basket: %w", err)
+//	}
 func (m *BasketManager) CreateBasket(ctx context.Context, basketName string) error {
 	url := fmt.Sprintf("%s/%s/basket/%s", m.baseURL, m.apiKey, basketName)
-	
+
 	req, err := http.NewRequestWithContext(ctx, http.MethodPost, url, http.NoBody)
 	if err != nil {
 		return fmt.Errorf("failed to create request: %w", err)
 	}
-	
+
 	req.Header.Set("Content-Type", "application/json")
-	
+
 	resp, err := m.httpClient.Do(req)
 	if err != nil {
 		return fmt.Errorf("request failed: %w", err)
 	}
 	defer resp.Body.Close()
-	
+
 	if resp.StatusCode != http.StatusOK {
 		body, _ := io.ReadAll(resp.Body)
 		var errResp ErrorResponse
@@ -119,7 +123,7 @@ func (m *BasketManager) CreateBasket(ctx context.Context, basketName string) err
 		}
 		return fmt.Errorf("failed to create basket: %s", resp.Status)
 	}
-	
+
 	return nil
 }
 
@@ -129,24 +133,25 @@ func (m *BasketManager) CreateBasket(ctx context.Context, basketName string) err
 // (e.g., network issues) is returned as the second parameter.
 //
 // Example:
-//  	exists, err := manager.BasketExists(ctx, "my-basket")
-//  	if err != nil {
-//  		return false, fmt.Errorf("failed to check basket existence: %w", err)
-//  	}
+//
+//	exists, err := manager.BasketExists(ctx, "my-basket")
+//	if err != nil {
+//	    return false, fmt.Errorf("failed to check basket existence: %w", err)
+//	}
 func (m *BasketManager) BasketExists(ctx context.Context, basketName string) (bool, error) {
 	url := fmt.Sprintf("%s/%s/basket/%s", m.baseURL, m.apiKey, basketName)
-	
-	req, err := http.NewRequestWithContext(ctx, http.MethodGet, url, nil)
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, url, http.NoBody)
 	if err != nil {
 		return false, fmt.Errorf("failed to create request: %w", err)
 	}
-	
+
 	resp, err := m.httpClient.Do(req)
 	if err != nil {
 		return false, fmt.Errorf("request failed: %w", err)
 	}
 	defer resp.Body.Close()
-	
+
 	return resp.StatusCode == http.StatusOK, nil
 }
 
@@ -156,24 +161,25 @@ func (m *BasketManager) BasketExists(ctx context.Context, basketName string) (bo
 // of their content or creation time.
 //
 // Example:
-//  	baskets, err := manager.ListBaskets(ctx)
-//  	if err != nil {
-//  		return nil, fmt.Errorf("failed to list baskets: %w", err)
-//  	}
+//
+//	baskets, err := manager.ListBaskets(ctx)
+//	if err != nil {
+//	    return nil, fmt.Errorf("failed to list baskets: %w", err)
+//	}
 func (m *BasketManager) ListBaskets(ctx context.Context) ([]string, error) {
 	url := fmt.Sprintf("%s/%s/baskets", m.baseURL, m.apiKey)
-	
-	req, err := http.NewRequestWithContext(ctx, http.MethodGet, url, nil)
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, url, http.NoBody)
 	if err != nil {
 		return nil, fmt.Errorf("failed to create request: %w", err)
 	}
-	
+
 	resp, err := m.httpClient.Do(req)
 	if err != nil {
 		return nil, fmt.Errorf("request failed: %w", err)
 	}
 	defer resp.Body.Close()
-	
+
 	if resp.StatusCode != http.StatusOK {
 		body, _ := io.ReadAll(resp.Body)
 		var errResp ErrorResponse
@@ -182,12 +188,12 @@ func (m *BasketManager) ListBaskets(ctx context.Context) ([]string, error) {
 		}
 		return nil, fmt.Errorf("failed to list baskets: %s", resp.Status)
 	}
-	
+
 	var baskets []string
 	if err := json.NewDecoder(resp.Body).Decode(&baskets); err != nil {
 		return nil, fmt.Errorf("failed to decode response: %w", err)
 	}
-	
+
 	return baskets, nil
 }
 
@@ -197,10 +203,11 @@ func (m *BasketManager) ListBaskets(ctx context.Context) ([]string, error) {
 // If the basket doesn't exist, it will be created.
 //
 // Example:
-//  	data := map[string]interface{}{"key": "value"}
-//  	if err := manager.UpdateBasket(ctx, "my-basket", data); err != nil {
-//  		return fmt.Errorf("failed to update basket: %w", err)
-//  	}
+//
+//	data := map[string]interface{}{"key": "value"}
+//	if err := manager.UpdateBasket(ctx, "my-basket", data); err != nil {
+//	    return fmt.Errorf("failed to update basket: %w", err)
+//	}
 func (m *BasketManager) UpdateBasket(ctx context.Context, basketName string, data interface{}) error {
 	payload, err := json.Marshal(data)
 	if err != nil {
@@ -208,20 +215,20 @@ func (m *BasketManager) UpdateBasket(ctx context.Context, basketName string, dat
 	}
 
 	url := fmt.Sprintf("%s/%s/basket/%s", m.baseURL, m.apiKey, basketName)
-	
+
 	req, err := http.NewRequestWithContext(ctx, http.MethodPut, url, bytes.NewReader(payload))
 	if err != nil {
 		return fmt.Errorf("failed to create request: %w", err)
 	}
-	
+
 	req.Header.Set("Content-Type", "application/json")
-	
+
 	resp, err := m.httpClient.Do(req)
 	if err != nil {
 		return fmt.Errorf("request failed: %w", err)
 	}
 	defer resp.Body.Close()
-	
+
 	if resp.StatusCode != http.StatusOK {
 		body, _ := io.ReadAll(resp.Body)
 		var errResp ErrorResponse
@@ -230,7 +237,7 @@ func (m *BasketManager) UpdateBasket(ctx context.Context, basketName string, dat
 		}
 		return fmt.Errorf("failed to update basket: %s", resp.Status)
 	}
-	
+
 	return nil
 }
 
@@ -241,24 +248,25 @@ func (m *BasketManager) UpdateBasket(ctx context.Context, basketName string, dat
 // be unmarshaled into the target type.
 //
 // Example:
-//  	var data map[string]interface{}
-//  	if err := manager.GetBasket(ctx, "my-basket", &data); err != nil {
-//  		return fmt.Errorf("failed to get basket: %w", err)
-//  	}
+//
+//	var data map[string]interface{}
+//	if err := manager.GetBasket(ctx, "my-basket", &data); err != nil {
+//	    return fmt.Errorf("failed to get basket: %w", err)
+//	}
 func (m *BasketManager) GetBasket(ctx context.Context, basketName string, target interface{}) error {
 	url := fmt.Sprintf("%s/%s/basket/%s", m.baseURL, m.apiKey, basketName)
-	
-	req, err := http.NewRequestWithContext(ctx, http.MethodGet, url, nil)
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, url, http.NoBody)
 	if err != nil {
 		return fmt.Errorf("failed to create request: %w", err)
 	}
-	
+
 	resp, err := m.httpClient.Do(req)
 	if err != nil {
 		return fmt.Errorf("request failed: %w", err)
 	}
 	defer resp.Body.Close()
-	
+
 	if resp.StatusCode != http.StatusOK {
 		body, _ := io.ReadAll(resp.Body)
 		var errResp ErrorResponse
@@ -267,10 +275,10 @@ func (m *BasketManager) GetBasket(ctx context.Context, basketName string, target
 		}
 		return fmt.Errorf("failed to get basket: %s", resp.Status)
 	}
-	
+
 	if err := json.NewDecoder(resp.Body).Decode(target); err != nil {
 		return fmt.Errorf("failed to decode response: %w", err)
 	}
-	
+
 	return nil
 }

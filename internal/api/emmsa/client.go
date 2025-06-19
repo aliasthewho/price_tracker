@@ -21,7 +21,7 @@ const (
 // EMMSAPrice represents the price data from EMMSA
 type EMMSAPrice struct {
 	Date       string  `json:"date"`
-	Producto   string  `json:"producto"`
+	Product    string  `json:"product"`
 	Variedad   string  `json:"variedad"`
 	PrecioMin  float64 `json:"precio_min"`
 	PrecioMax  float64 `json:"precio_max"`
@@ -69,7 +69,7 @@ func parsePriceTable(html []byte, date time.Time) ([]EMMSAPrice, error) {
 		}
 
 		// Extract text from each cell
-		producto := strings.TrimSpace(cells.Eq(0).Text())
+		product := strings.TrimSpace(cells.Eq(0).Text())
 		variedad := strings.TrimSpace(cells.Eq(1).Text())
 		precioMinStr := strings.TrimSpace(cells.Eq(2).Text())
 		precioMaxStr := strings.TrimSpace(cells.Eq(3).Text())
@@ -89,7 +89,7 @@ func parsePriceTable(html []byte, date time.Time) ([]EMMSAPrice, error) {
 
 		price := EMMSAPrice{
 			Date:       date.Format("2006-01-02"),
-			Producto:   producto,
+			Product:    product,
 			Variedad:   variedad,
 			PrecioMin:  precioMin,
 			PrecioMax:  precioMax,
